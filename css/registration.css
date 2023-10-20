@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: url("../images/fon.jpeg") no-repeat center center fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login-container {
+    position: relative;
+    width: 400px;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: calc(100% - 12px);
+    padding: 10px 0 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.registration-container {
+    position: relative;
+    width: 400px;
+}
+
+
+.agreement-group {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+.agreement-group input {
+    flex: 0;
+    margin-right: 10px;
+}
+
+.agreement-label {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.highlight {
+    color: #0056b3;
+    cursor: pointer;
+}

@@ -1,0 +1,62 @@
+.image-cover {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .middle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+
+  .navbar-toggler {
+    background-color: rgba(175, 172, 169, 0.907);
+  }
+
+  .navbar-nav .nav-link {
+    border-radius: 20px !important;
+    color: #333 !important;
+    padding: 10px 20px !important;
+    transition-duration: 0.4s !important;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background-color: #444447dc !important;
+    color: white !important;
+  }
+
+  .dropdown-menu {
+    border-radius: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #9e9c9f;
+    transition: all 0.3s ease-out;
+  }
+
+  
+  .navbar-toggler-icon {
+    border: none; 
+  }
+
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler:hover {
+    outline: none; 
+    box-shadow: none;
+  }
+
+  nav img {
+    margin-left: 30px;
+  }
+
+  nav button {
+    margin-right: 30px;
+  }
+
+  nav .nav-link.dropdown-toggle {
+    margin-right: 30px;
+  }
