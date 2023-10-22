@@ -65,7 +65,7 @@ textarea {
 
 section button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #595047;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -74,5 +74,5 @@ section button {
 }
 
 section button:hover {
-  background-color: #0056b3;
+  background-color: #6d6664;
 }

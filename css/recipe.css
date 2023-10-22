@@ -60,7 +60,7 @@ a:hover {
 }
 
 .search-active {
-  background-color: #92f592;
+  background-color: #d9cbbf;
   transform: scale(1.05);
 }
 
@@ -133,14 +133,14 @@ a:hover {
 .pagination li:not(.active) {
   font-weight: bold;
   background-color: #ffffff;
-  border: 1px solid #007bff;
+  border: 1px solid #595047;
 }
 
 .pagination li.active {
   font-weight: bold;
-  background-color: #007bff;
+  background-color: #595047;
   color: #fff;
-  border: 1px solid #007bff;
+  border: 1px solid #595047;
 }
 
 .go-to-page {
