@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>О нас</title>
+
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+    />
+
+    <link rel="icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+</head>
+<body>
+
+<%- include('header.ejs') %>
+
+
+<main>
+    <section class="history">
+        <h2>История</h2>
+        <div class="text-content">
+            <p>
+                Наш сайт рецептов был основан в 2023 году студентом, который любил
+                готовить и вдохновлялся вкусными и простыми рецептами его близких
+                людей.
+            </p>
+            <p>
+                От мамы он унаследовал рецепты семейных блюд, которые готовятся уже
+                несколько поколений. Его сестра, заядлый путешественник, привнесла в
+                семейный кулинарный репертуар экзотические блюда из разных уголков
+                мира. У нее есть свой блог в телеграмме, который собирает
+                разнообразную аудиторию заинтересованных лиц.
+            </p>
+            <p>
+                Все эти вкусы и традиции слились вместе, вдохновив его на создание
+                сайта кулинарных рецептов. Он хотел поделиться интересными
+                кулинарными открытиями со всего мира.
+            </p>
+            <p>
+                С тех пор наш сайт вырос и стал цифровой площадкой с рецептами, где
+                любители готовки со всего мира могут найти вдохновение для своих
+                блюд. Наш основатель продолжает быть активной частью нашего
+                сообщества, вдохновляя посетителей сайта новыми и волнующими
+                кулинарными приключениями.
+            </p>
+        </div>
+    </section>
+    <section class="goal">
+        <h2>Цель</h2>
+        <div class="text-content">
+            <p>
+                Наша цель - делиться вдохновением и знаниями о кулинарии с людьми со
+                всего мира. Мы хотим помочь каждому найти идеальный рецепт, будь то
+                простое блюдо на каждый день или изысканное блюдо на особый случай.
+            </p>
+            <p>
+                Мы стремимся обеспечить доступ к широкому спектру рецептов, чтобы
+                каждый мог найти то, что подходит именно ему. Будь вы вегетарианцем,
+                следуете безглютеновой диете, ищете рецепты на 30 минут или хотите
+                приготовить что-то особенное, у нас есть рецепт для вас.
+            </p>
+            <p>
+                Мы верим, что готовка - это способ выразить любовь, заботу и
+                творчество. Наша миссия - помочь вам открыть для себя радость
+                кулинарии и поделиться ею со своими близкими.
+            </p>
+        </div>
+    </section>
+    <section>
+        <canvas id="recipeDifficultyChart"></canvas>
+    </section>
+    <section>
+        <canvas id="visitorsChart"></canvas>
+    </section>
+    <section>
+        <canvas id="recipesByCountryChart"></canvas>
+    </section>
+    <section>
+        <canvas id="dishTypesRadarChart"></canvas>
+    </section>
+    <section>
+        <canvas id="popularRecipesVisitsChart"></canvas>
+    </section>
+</main>
+<footer class="mt-5 p-4 text-center" style="background-color: #d9cbbf">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">EASY COOK</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#!" class="text-dark">Разработчики</a></li>
+                    <li><a href="#!" class="text-dark">Соцсети</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-1" style="background-color: #d9b89c">
+        © 2023 Copyright:
+        <a class="text-dark" href="#">easy2cook.ru</a>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/stat.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background: url("../images/fon.jpeg") no-repeat center center fixed;
+  background: url("/images/fon.jpeg") no-repeat center center fixed;
 
   display: flex;
   flex-direction: column;
@@ -42,10 +42,37 @@ h2 {
   text-align: center;
 }
 
-p {
-  text-indent: 20px;
+.text-content {
+  margin: 30px 0 0 30px;
 }
 
-.goal {
+.feedback {
   margin-bottom: 80px;
+  text-align: center;
+}
+
+.feedback .text-content {
+  margin: 30px 30px 0 30px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+section button {
+  padding: 10px 20px;
+  background-color: #595047;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+section button:hover {
+  background-color: #6d6664;
 }

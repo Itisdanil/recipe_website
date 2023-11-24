@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background: url("/images/fon.jpeg") no-repeat center center fixed;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1120px;
+    margin: 50px auto;
+
+    flex-grow: 1;
+    width: 100%;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+@media (max-width: 784px) {
+    h1 {
+        font-size: 30px;
+    }
+    .glass-container {
+        padding: 20px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 440px) {
+    h1 {
+        font-size: 20px;
+    }
+    .glass-container {
+        padding: 10px;
+        margin: 0 5px;
+    }
+}
+
+form {
+    display: grid;
+    font-size: 18px;
+
+    row-gap: 10px;
+}
+
+input {
+    outline: none;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 5px;
+    width: 300px;
+    max-width: 60vw;
+
+}
+
+.name {
+    justify-self: center;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#image {
+    max-width: 75vw;
+    width: 800px;
+    justify-self: center;
+}
+
+.input-img {
+    justify-self: center;
+    display: grid;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.input-img input {
+    margin-left: 5px;
+}
+
+.block-name {
+    font-size: 24px;
+
+    margin-top: 40px;
+    margin-bottom: 0;
+    justify-self: center;
+}
+
+main ul,
+main ol {
+    margin-left: 5px;
+    justify-self: center;
+}
+
+main li:not(:first-child) {
+    margin-top: 10px;
+}
+
+main li img {
+    width: 25px;
+    position: relative;
+    left: -35px;
+    top: -2px;
+
+    cursor: pointer;
+}
+
+main li input {
+    outline: none;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 5px 35px 5px 5px;
+    width: 260px;
+    max-width: 60vw;
+}
+
+.input-add {
+    justify-self: center;
+}
+
+.add-btn {
+    justify-self: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #595047;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #6d6664;
+}
+
+.submit-button {
+    justify-self: center;
+    font-size: 25px;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 10px;
+}

@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background: url("/images/fon.jpeg") no-repeat center center fixed;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1120px;
+    margin: 50px auto;
+
+    flex-grow: 1;
+    width: 100%;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+
+@media (max-width: 784px) {
+    .glass-container {
+        padding: 20px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 440px) {
+
+    .glass-container {
+        padding: 10px;
+        margin: 0 5px;
+    }
+}
+
+.recipe-info {
+    display: grid;
+    font-size: 18px;
+
+    row-gap: 10px;
+}
+
+.back-btn {
+    justify-self: left;
+    position: absolute;
+}
+
+.back-btn a{
+    text-decoration: none;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.back-btn a button{
+    font-size: 14px;
+    padding: 7px;
+}
+
+.control-btn {
+    justify-self: right;
+    position: absolute;
+}
+
+.control-btn button {
+    font-size: 14px;
+    padding: 7px;
+}
+
+.name {
+    justify-self: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0;
+    max-width: 350px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .name {
+        margin-top: 50px;
+    }
+
+    .control-btn {
+        margin-right: 10px;
+    }
+}
+
+
+#image {
+    max-width: 75vw;
+    width: 800px;
+    justify-self: center;
+}
+
+.block-name {
+    font-size: 30px;
+
+    margin-top: 40px;
+    margin-bottom: 0;
+    justify-self: center;
+}
+
+main ul,
+main ol {
+    font-size: 22px;
+    margin-left: 5px;
+    justify-self: center;
+}
+
+main li:not(:first-child) {
+    margin-top: 10px;
+}
+
+.ing-info {
+}
+
+.step-info {
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #595047;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #6d6664;
+}
+
+

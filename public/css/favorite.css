@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background: url("../images/fon.jpeg") no-repeat center center fixed;
+  background: url("/images/fon.jpeg") no-repeat center center fixed;
 
   display: flex;
   flex-direction: column;

@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: url("../images/fon.jpeg") no-repeat center center fixed;
+  background: url("/images/fon.jpeg") no-repeat center center fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,30 +58,4 @@ button {
 
 button:hover {
   background-color: #6d6664;
-}
-
-.registration-container {
-  position: relative;
-  width: 400px;
-}
-
-.agreement-group {
-  display: flex;
-  justify-items: flex-start;
-  align-items: center;
-}
-
-.agreement-group input {
-  flex: 0;
-  margin-right: 10px;
-}
-
-.agreement-label {
-  font-size: 12px;
-  margin-bottom: 0;
-}
-
-.highlight {
-  color: #6d6664;
-  cursor: pointer;
 }
