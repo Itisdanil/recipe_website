@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Главная</title>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+    />
+    <style>
+        body {
+            background: url("images/fon.jpeg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .image-cover {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .middle-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        .navbar-toggler {
+            background-color: #d9cbbf;
+        }
+
+        .navbar-nav .nav-link {
+            border-radius: 20px !important;
+            color: #333 !important;
+            padding: 10px 20px !important;
+            transition-duration: 0.4s !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #595047 !important;
+            color: white !important;
+        }
+
+        .dropdown-menu {
+            border-radius: 15px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: #d9cbbf;
+            transition: all 0.3s ease-out;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            color: #595047;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .navbar-toggler-icon {
+            border: none;
+        }
+
+        .navbar-toggler:focus,
+        .navbar-toggler:active,
+        .navbar-toggler:hover {
+            outline: none;
+            box-shadow: none;
+        }
+
+        nav img {
+            margin-left: 30px;
+        }
+
+        nav button {
+            margin-right: 30px;
+        }
+
+        nav .nav-link.dropdown-toggle {
+            margin-right: 30px;
+        }
+        .carousel-indicators li {
+            font-size: 0;
+            line-height: 0;
+        }
+    </style>
+    <title>Главная</title>
+</head>
+<body>
+
+<%- include('header.ejs') %>
+
+<div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+>
+    <ol class="carousel-indicators">
+        <li
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+        ></li>
+        <li
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+        ></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/images/slider1.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption">
+                <h3>Сотни рецептов</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/images/slider2.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption">
+                <h3>Удобный поиск</h3>
+            </div>
+        </div>
+    </div>
+    <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+    >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+    >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="image-cover">
+                <img src="/images/hot_meals.jpg" class="img-fluid" alt="..." />
+                <div class="middle-text">Горячие блюда</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="image-cover">
+                <img src="/images/salads.jpg" class="img-fluid" alt="..." />
+                <div class="middle-text">Салаты</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="image-cover">
+                <img src="/images/snacks.jpg" class="img-fluid" alt="..." />
+                <div class="middle-text">Закуски</div>
+            </div>
+        </div>
+    </div>
+    <div class="row md-4">
+        <div class="col-md-4">
+            <div class="image-cover">
+                <img src="/images/desserts.jpg" class="img-fluid" alt="..." />
+                <div class="middle-text">Десерты</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="image-cover">
+                <img src="/images/vegetables.jpg" class="img-fluid" alt="..." />
+                <div class="middle-text">Гарниры</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="image-cover">
+                <img src="/images/drinks.jpg" class="img-fluid" alt="..." />
+                <div class="middle-text">Напитки</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="mt-5 p-4 text-center" style="background-color: #d9cbbf">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">EASY COOK</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#!" class="text-dark">Разработчики</a></li>
+                    <li><a href="#!" class="text-dark">Соцсети</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-1" style="background-color: #d9b89c">
+        © 2023 Copyright:
+        <a class="text-dark" href="#">easy2cook.ru</a>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

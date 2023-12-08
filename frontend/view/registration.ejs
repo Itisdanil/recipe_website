@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Авторизация</title>
+    <link rel="icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/registration.css" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+</head>
+<body>
+<div class="registration-container">
+    <div class="glass-container">
+        <h2>Регистрация</h2>
+        <form action="#" method="post">
+            <div class="input-group">
+                <label for="first-name">Имя</label>
+                <input type="text" id="first-name" name="first_name" required />
+            </div>
+            <div class="input-group">
+                <label for="last-name">Фамилия</label>
+                <input type="text" id="last-name" name="last_name" required />
+            </div>
+            <div class="input-group">
+                <label for="username">Email или логин</label>
+                <input type="text" id="username" name="username" required />
+            </div>
+            <div class="input-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required />
+            </div>
+            <div class="input-group agreement-group">
+                <input type="checkbox" id="agreement" name="agreement" required />
+                <label for="agreement" class="agreement-label"
+                >Я принимаю условия
+                    <span class="highlight">пользовательского соглашения</span></label
+                >
+            </div>
+
+            <button type="submit" class="submit-button">
+                Зарегистрироваться
+            </button>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/form/registration.js"></script>
+</body>
+</html>

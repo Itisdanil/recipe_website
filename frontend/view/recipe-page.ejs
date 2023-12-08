@@ -1,0 +1,22 @@
+<% recipes.forEach(recipe => { %>
+    <a href="/recipe/<%= recipe.id %>" class="recipe-link">
+        <div class="recipe">
+            <img
+                    class="recipe-img"
+                    src="<%= recipe.path_photo %>"
+                    alt="Фото рецепта"
+            />
+            <div class="recipe-name"><%= recipe.name %></div>
+
+            <% if (role !== 'Гость') { %>
+                <img src="
+                <% if (recipe.favorite) { %>
+                    /image/favorite/favorite-on.png
+                <% } else { %>
+                    /image/favorite/favorite-off.png
+                <% } %>
+                " alt="" class="favorite-img" data-id="<%= recipe.id %>">
+            <% } %>
+        </div>
+    </a>
+<% }) %>
