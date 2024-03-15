@@ -70,3 +70,59 @@ th {
 input {
     width: 100%;
 }
+
+@media (min-width: 2200px) {
+
+    main {
+      max-width: 1500px;
+      font-size: 25px;
+    }
+    section {
+        max-width: 80vw;
+    }
+
+    th, td {
+        padding: 30px;
+        font-size: 30px;
+    }
+  }
+  
+  @media (min-width: 3200px) {
+  
+    main {
+      max-width: 2000px;
+      font-size: 30px;
+    }
+    th, td {
+        padding: 45px;
+        font-size: 45px;
+    }
+  
+  }
+  
+  @media (min-width: 4200px) {
+  
+    main {
+      max-width: 3000px;
+      font-size: 35px;
+    }
+    th, td {
+        padding: 55px;
+        font-size: 55px;
+    }
+  
+  }
+  
+  @media (min-width: 5200px) {
+  
+    main {
+      max-width: 4000px;
+      font-size: 50px;
+    }
+  
+    th, td {
+        padding: 70px;
+        font-size: 70px;
+    }
+
+  }

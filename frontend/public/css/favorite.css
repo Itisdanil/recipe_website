@@ -197,3 +197,122 @@ a:hover {
   margin-left: 10px;
   align-self: center;
 }
+
+@media (min-width: 2200px) {
+
+  main {
+    max-width: 1500px;
+    font-size: 25px;
+  }
+
+  .favorites {
+    margin: 40px 30px;
+    grid-template-columns: repeat(auto-fit, 400px);
+    gap: 40px;
+  }
+  
+  .favorites .recipe {
+    width: 400px;
+    height: 300px;
+  }
+
+}
+
+@media (min-width: 3200px) {
+
+  main {
+    max-width: 2000px;
+    font-size: 30px;
+  }
+
+  .favorite-none-text,
+  .recommendation-text {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto;
+    width: 800px;
+  }
+
+  .recipe {
+    width: 350px;
+    height: 300px;
+  }
+
+  .carousel-container {
+    height: 350px;
+  }
+
+  .favorites {
+    margin: 50px 40px;
+    grid-template-columns: repeat(auto-fit, 500px);
+    gap: 50px;
+  }
+  
+  .favorites .recipe {
+    width: 500px;
+    height: 400px;
+  }
+
+}
+
+@media (min-width: 4200px) {
+
+  main {
+    max-width: 3000px;
+    font-size: 35px;
+  }
+  .favorite-none-text,
+  .recommendation-text {
+    font-size: 35px;
+  }
+
+  .recipe {
+    width: 450px;
+    height: 350px;
+  }
+
+  .carousel-container {
+    height: 400px;
+  }
+
+  .favorites {
+    margin: 60px 50px;
+    grid-template-columns: repeat(auto-fit, 700px);
+    gap: 60px;
+  }
+  
+  .favorites .recipe {
+    width: 650px;
+    height: 500px;
+  }
+}
+
+@media (min-width: 5200px) {
+
+  main {
+    max-width: 4000px;
+    font-size: 50px;
+  }
+  .favorite-none-text,
+  .recommendation-text {
+    font-size: 50px;
+  }
+  .recipe {
+    width: 750px;
+    height: 700px;
+  }
+  .carousel-container {
+    height: 800px;
+  }
+
+  .favorites {
+    margin: 100px 80px;
+    grid-template-columns: repeat(auto-fit, 1000px);
+    gap: 100px;
+  }
+  
+  .favorites .recipe {
+    width: 1000px;
+    height: 700px;
+  }
+}

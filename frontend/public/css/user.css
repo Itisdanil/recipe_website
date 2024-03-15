@@ -105,3 +105,94 @@ h2 {
     align-self: center;
 }
 
+@media (min-width: 2200px) {
+
+    main {
+      max-width: 1500px;
+      font-size: 25px;
+    }
+  
+    .recipes {
+      margin: 40px 30px;
+      grid-template-columns: repeat(auto-fit, 400px);
+      gap: 40px;
+    }
+    
+    .recipes .recipe {
+      width: 400px;
+      height: 300px;
+    }
+
+    section {
+        max-width: 70vw;
+    }
+  }
+  
+  @media (min-width: 3200px) {
+  
+    main {
+      max-width: 2000px;
+      font-size: 30px;
+    }
+  
+    .recipes {
+      margin: 50px 40px;
+      grid-template-columns: repeat(auto-fit, 500px);
+      gap: 50px;
+    }
+    
+    .recipes .recipe {
+      width: 500px;
+      height: 400px;
+    }
+
+    .info-user p, h2{
+        font-size: 40px;
+    }
+  }
+  
+  @media (min-width: 4200px) {
+  
+    main {
+      max-width: 3000px;
+      font-size: 35px;
+    }
+  
+    .recipes {
+      margin: 60px 50px;
+      grid-template-columns: repeat(auto-fit, 700px);
+      gap: 60px;
+    }
+    
+    .recipes .recipe {
+      width: 650px;
+      height: 500px;
+    }
+
+    .info-user p, h2{
+        font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 5200px) {
+  
+    main {
+      max-width: 4000px;
+      font-size: 50px;
+    }
+  
+    .recipes {
+      margin: 100px 80px;
+      grid-template-columns: repeat(auto-fit, 1000px);
+      gap: 100px;
+    }
+    
+    .recipes .recipe {
+      width: 1000px;
+      height: 700px;
+    }
+
+    .info-user p, h2{
+        font-size: 80px;
+    }
+  }

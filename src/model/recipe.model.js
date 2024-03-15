@@ -44,6 +44,11 @@ class RecipeModel {
         return query.rows[0];
     }
 
+    async getRecipesByIds(ids) {
+        const query = await pool.query('SELECT * FROM recipe WHERE id = ANY($1);', [ids]);
+        return query.rows;
+    }
+
     async countRecipe() {
         const query = await pool.query('select count(*) as count from recipe');
         return query.rows[0].count;

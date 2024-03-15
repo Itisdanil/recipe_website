@@ -14,6 +14,7 @@
     <link rel="icon" href="#" type="image/x-icon" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/contact.css" />
+    <link rel="stylesheet" href="/css/fix.css" />
     <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -23,7 +24,7 @@
 
 <%- include('header.ejs') %>
 
-
+<div class="main-content">
 <main>
     <section class="contacts">
         <h2>Как с нами связаться</h2>
@@ -49,24 +50,8 @@
         </div>
     </section>
 </main>
-<footer class="mt-5 p-4 text-center" style="background-color: #d9cbbf">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">EASY2COOK</h5>
-
-                <ul class="list-unstyled">
-                    <li><a href="#!" class="text-dark">Разработчики</a></li>
-                    <li><a href="#!" class="text-dark">Соцсети</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="text-center p-1" style="background-color: #d9b89c">
-        © 2023 Copyright:
-        <a class="text-dark" href="#">easy2cook.ru</a>
-    </div>
-</footer>
+</div>
+<%- include('footer.ejs') %>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

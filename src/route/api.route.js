@@ -7,7 +7,7 @@ const path = require("path");
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '..', '..', 'uploads'));
+        cb(null, path.join(__dirname, '..', '..', 'frontend', 'public', 'image', 'recipe'));
     },
     filename: (req, file, cb) => {
         cb(null, file.originalname);
@@ -16,14 +16,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Графики и диаграммы
-
-router.get('/recipe/difficulty', apiController.getRecipeDiff);
-router.get('/visitors', apiController.getVisitors);
-router.get('/recipes-by-country', apiController.getRecipesByCountry);
-router.get('/dish-types', apiController.getDishTypes);
-router.get('/popular-recipes-visits', apiController.getPopularRecipesVisits);
-
 
 // Формы
 
@@ -31,8 +23,6 @@ router.post('/login', apiController.getLogin);
 router.post('/registration', apiController.postRegistration);
 router.post('/addRecipe', upload.single('photo'), apiController.postAddRecipe);
 router.post('/feedback', apiController.postFeedback);
-
-
 
 
 

@@ -4,20 +4,26 @@ import re
 import pandas as pd
 import numpy as np
 import torch
+from dotenv import load_dotenv
 from fuzzywuzzy import fuzz, process
 from sqlalchemy import create_engine
 from sklearn.metrics.pairwise import cosine_similarity
 from transformers import AutoTokenizer, AutoModel
 
 
+DOTENV_PATH = os.path.join(os.path.dirname(__file__), '.env')
+if os.path.exists(DOTENV_PATH):
+    load_dotenv(DOTENV_PATH)
+
+DB_HOST=os.getenv("DB_HOST")
+DB_PORT=os.getenv("DB_PORT")
+DB_USER=os.getenv("DB_USER")
+DB_PASSWORD=os.getenv("DB_PASSWORD")
+DB_NAME=os.getenv("DB_NAME")
+
+
 TOKENIZER = AutoTokenizer.from_pretrained('cointegrated/rubert-tiny2')
 MODEL = AutoModel.from_pretrained('cointegrated/rubert-tiny2')
-
-DB_HOST=""
-DB_PORT=""
-DB_USER=""
-DB_PASSWORD=""
-DB_NAME=""
 
 
 def read_text_file(file_path):
@@ -28,6 +34,7 @@ def get_dataframe(table):
     engine = create_engine(f'postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}')
 
     data = pd.read_sql_table(table, con=engine)
+    data = data.sort_values("id")
 
     if table == "ingredient":
         data = data.groupby('recipe_id')['info'].agg(list).reset_index()
@@ -52,7 +59,7 @@ def get_list_of_recipes(dists_values, threshold):
     if len(sorted_indices_desc) > 0:
         return sorted_indices_desc, True
 
-    return [], False
+    return np.array([]), False
 
 
 def get_ans_search(query, dist_threshold=85, sim_threshold=0.7, table="recipe"):

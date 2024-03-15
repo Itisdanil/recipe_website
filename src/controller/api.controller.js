@@ -15,60 +15,6 @@ const generateAccessToken = (user_id, role) => {
 
 class ApiController{
 
-    async getRecipeDiff(req, res) {
-        const fakeRecipeDifficultyData = [
-            { _id: 'Простой', count: 25 },
-            { _id: 'Средний', count: 40 },
-            { _id: 'Сложный', count: 15 }
-        ];
-
-        res.json(fakeRecipeDifficultyData);
-    }
-
-    async getVisitors(req, res) {
-        const visitorsData = [
-            { date: '2023-11-01', visitors: 100 },
-            { date: '2023-11-02', visitors: 120 },
-            { date: '2023-11-03', visitors: 90 },
-            { date: '2023-11-04', visitors: 150 },
-            { date: '2023-11-05', visitors: 200 },
-            { date: '2023-11-06', visitors: 180 },
-            { date: '2023-11-07', visitors: 250 }
-        ];
-
-        res.json(visitorsData);
-    }
-
-    async getRecipesByCountry(req, res) {
-        const recipesByCountryData = [
-            { country: 'Италия', recipesCount: 150 },
-            { country: 'Франция', recipesCount: 120 },
-            { country: 'Япония', recipesCount: 199 },
-            { country: 'Россия', recipesCount: 253 },
-        ];
-
-        res.json(recipesByCountryData);
-    }
-
-    async getDishTypes(req, res) {
-        const dishTypesData = [
-            { type: 'Завтрак', count: 30 },
-            { type: 'Обед', count: 50 },
-            { type: 'Ужин', count: 40 }
-        ];
-
-        res.json(dishTypesData);
-    }
-
-    async getPopularRecipesVisits(req, res) {
-        const popularRecipesVisitsData = [
-            { recipe: 'Борщ', visits: 120 },
-            { recipe: 'Пельмени', visits: 90 },
-            { recipe: 'Паста карбонара', visits: 85 },
-        ];
-
-        res.json(popularRecipesVisitsData);
-    }
 
     async getLogin(req, res) {
         try {

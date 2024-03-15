@@ -76,3 +76,109 @@ section button {
 section button:hover {
   background-color: #6d6664;
 }
+
+
+@media (min-width: 2200px) {
+
+  main {
+    max-width: 1500px;
+    font-size: 25px;
+  }
+
+  section {
+    max-width: 800px;
+  }
+  
+  h2 {
+    font-size: 35px;
+  }
+  
+  p {
+    font-size: 28px;
+  }
+
+  section button {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+}
+
+@media (min-width: 3200px) {
+
+  main {
+    max-width: 2000px;
+    font-size: 30px;
+  }
+
+  section {
+    max-width: 1000px;
+  }
+  
+  h2 {
+    font-size: 45px;
+  }
+  
+  p {
+    font-size: 32px;
+  }
+
+  section button {
+    padding: 20px 30px;
+    font-size: 30px;
+  }
+
+}
+
+@media (min-width: 4200px) {
+
+  main {
+    max-width: 3000px;
+    font-size: 35px;
+  }
+
+  section {
+    max-width: 1400px;
+  }
+  
+  h2 {
+    font-size: 60px;
+  }
+  
+  p {
+    font-size: 40px;
+  }
+
+  section button {
+    padding: 30px 40px;
+    font-size: 40px;
+  }
+
+}
+
+@media (min-width: 5200px) {
+
+  main {
+    max-width: 4000px;
+    font-size: 50px;
+  }
+
+  section {
+    max-width: 2200px;
+    padding: 100px;
+  }
+  
+  h2 {
+    font-size: 100px;
+  }
+  
+  p {
+    font-size: 70px;
+  }
+
+  section button {
+    padding: 40px 50px;
+    font-size: 70px;
+  }
+
+}

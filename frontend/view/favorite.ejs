@@ -14,6 +14,7 @@
     <link rel="icon" href="#" type="image/x-icon" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/favorite.css" />
+    <link rel="stylesheet" href="/css/fix.css" />
     <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -23,32 +24,45 @@
 
 <%- include('header.ejs') %>
 
-
+<div class="main-content">
 <main>
+    <% if (recipes.length === 0) { %>
+        <p class="favorite-none-text">К сожалению, вы ещё не добавили любимые рецепты.</p>
+    <% } else { %>
     <section class="favorites">
-        <% if (recipes.length === 0) { %>
-            <p class="favorite-none-text">К сожалению, вы ещё не добавили любимые рецепты.</p>
-        <% } else { %>
             <% recipes.forEach(recipe => { %>
-                <a href="/recipe/<%= recipe.recipe_id %>" class="recipe-link">
+                <a href="/recipe/<%= recipe.recipe_id %>?back=favorite" class="recipe-link">
                     <div class="recipe">
                         <img
                                 class="recipe-img"
-                                src="<%= recipe.path_photo %>"
+                                src="/image/recipe/<%= recipe.path_photo %>"
                                 alt="Фото рецепта"
                         />
                         <div class="recipe-name"><%= recipe.name %></div>
                     </div>
                 </a>
             <% }) %>
-        <% } %>
-
     </section>
+    <% } %>
     <section class="recommendation">
         <p class="recommendation-text">Возможно, вам понравится</p>
         <div class="carousel-container">
             <div class="carousel">
-                <a href="#">
+                <% if (recommended.length != 0) { %>
+                    <% for (const recipe of recommended) { %>
+                        <a href="/recipe/<%= recipe.id %>?back=favorite">
+                            <div class="recipe">
+                                <img
+                                        class="recipe-img"
+                                        src="image/recipe/<%= recipe.path_photo %>"
+                                        alt="Фото рецепта"
+                                />
+                                <div class="recipe-name"><%= recipe.name %></div>
+                            </div>
+                        </a>
+                    <% } %>
+                <% } else { %>
+                <a href="/recipe/10?back=favorite">
                     <div class="recipe">
                         <img
                                 class="recipe-img"
@@ -58,7 +72,7 @@
                         <div class="recipe-name">Домашние пельмени с индейкой</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/recipe/11?back=favorite">
                     <div class="recipe">
                         <img
                                 class="recipe-img"
@@ -68,7 +82,7 @@
                         <div class="recipe-name">Ленивая самса с мясом и сыром</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/recipe/12?back=favorite">
                     <div class="recipe">
                         <img
                                 class="recipe-img"
@@ -78,7 +92,7 @@
                         <div class="recipe-name">Вишнёвый десерт</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/recipe/13?back=favorite">
                     <div class="recipe">
                         <img
                                 class="recipe-img"
@@ -88,7 +102,7 @@
                         <div class="recipe-name">Запеченный картофель</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/recipe/14?back=favorite">
                     <div class="recipe">
                         <img
                                 class="recipe-img"
@@ -98,7 +112,7 @@
                         <div class="recipe-name">​​Фаршированные баклажаны</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/recipe/15?back=favorite">
                     <div class="recipe">
                         <img
                                 class="recipe-img"
@@ -110,7 +124,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/recipe/16?back=favorite">
                     <div class="recipe">
                         <img
                                 class="recipe-img"
@@ -120,7 +134,7 @@
                         <div class="recipe-name">Салат из свеклы с горошком</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/recipe/17?back=favorite">
                     <div class="recipe">
                         <img
                                 class="recipe-img"
@@ -130,7 +144,7 @@
                         <div class="recipe-name">Лаваш с курицей и овощами</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/recipe/18?back=favorite">
                     <div class="recipe">
                         <img
                                 class="recipe-img"
@@ -140,6 +154,7 @@
                         <div class="recipe-name">Творожно-сметанная запеканка</div>
                     </div>
                 </a>
+                <% } %>
             </div>
             <img
                     class="prev-button"
@@ -153,29 +168,9 @@
             />
         </div>
     </section>
+</div>
 </main>
-<footer class="mt-5 p-4 text-center" style="background-color: #d9cbbf">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">EASY COOK</h5>
-
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#!" class="text-dark"><u>Разработчики</u></a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark"><u>Соцсети</u></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="text-center p-1" style="background-color: #d9b89c">
-        © 2023 Copyright:
-        <a class="text-dark" href="#"><u>easy2cook.ru</u></a>
-    </div>
-</footer>
+<%- include('footer.ejs') %>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="/js/favorite/slider.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

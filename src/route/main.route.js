@@ -10,10 +10,13 @@ router.get('/contact', mainController.getContact);
 router.get('/favorite', mainController.getFavorite);
 router.get('/recipe', mainController.getRecipe);
 router.get('/recipe/page', mainController.getPageRecipe);
+router.get('/recipe/search', mainController.getRecipeSearch);
+router.get('/recipe/search/page', mainController.getPageRecipeSearch);
 router.get('/recipe/:id', mainController.getOneRecipe);
 router.get('/registration', mainController.getRegistration);
 router.get('/logout', mainController.logout);
 router.get('/user', mainController.getUser);
+
 
 
 module.exports = router;

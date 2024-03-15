@@ -1,9 +1,9 @@
 <% recipes.forEach(recipe => { %>
-    <a href="/recipe/<%= recipe.id %>" class="recipe-link">
+    <a href="/recipe/<%= recipe.id %>?back=recipe&page=<%= pageNumber %><% if (typeof query !== 'undefined') { %>&search=<%= query %><% } %>" class="recipe-link">
         <div class="recipe">
             <img
                     class="recipe-img"
-                    src="<%= recipe.path_photo %>"
+                    src="/image/recipe/<%= recipe.path_photo %>"
                     alt="Фото рецепта"
             />
             <div class="recipe-name"><%= recipe.name %></div>
