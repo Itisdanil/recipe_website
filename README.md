@@ -10,7 +10,7 @@
 git clone https://github.com/Itisdanil/recipe_website.git
 ```
 
-Создайе виртуальное окружение
+Создайте виртуальное окружение
 
 ```
 python3 -m venv <your_env_name>
@@ -44,7 +44,9 @@ npm run start
 
 Каталог рецептов
 ![alt text](https://github.com/Itisdanil/recipe_website/blob/main/frontend/public/image/other/git1.png)
+
 Раздел избранное
 ![alt text](https://github.com/Itisdanil/recipe_website/blob/main/frontend/public/image/other/git2.png)
-Добавление собсвтенных рецептов на сайт
+
+Добавление собственных рецептов на сайт
 ![alt text](https://github.com/Itisdanil/recipe_website/blob/main/frontend/public/image/other/git3.png)
